@@ -1,0 +1,52 @@
+#include<stdio.h>
+int main()
+{
+    int a[50][50];
+    int i,j,m,n;
+    printf("nhap so hang n="); scanf("%d",&n);
+    printf("nhap so cot m="); scanf("%d",&m);
+    printf("nhap vao ma tran:\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("ma tran vua nhap la:\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    int tong=0;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            tong=tong+a[i][j];
+        }
+        printf("\n");
+    }
+    printf("tong la: ""%d",tong);
+    printf(" \nPhan tu co gia tri nho nhat la:\t");
+int min=a[0][0];
+int u,v;
+for(i=0;i<n;i++)
+{
+
+      for(j=0;j<m;j++)
+      {
+          if(min>a[i][j])
+            min=a[i][j];
+            u=i;
+            v=j;
+      }
+}
+printf("%d",min);
+printf("\nVi tri co gia tri nho nhat  la :   [%d][%d]",u,v);
+}
+
